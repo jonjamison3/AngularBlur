@@ -18,7 +18,7 @@ var AppComponent = (function () {
     AppComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            template: "\n  <h1>{{title}}</h1>\n\n  <div class=\"row\">\n    <div class=\".col-xs-6 .col-offset-3\">\n      <div class=\"container\">\n        <form>\n          <p>Name:\n            <input (blur)=\"hero.name = $event.target.value\" type=\"text\"/>\n          </p>\n          <p>id:\n            <input (focus)=\"hero.id = $event.target.value\" type=\"text\"/>\n          </p>\n        </form>\n        <h2>{{hero.name}} details!</h2>\n        <div><label>id: </label>{{hero.id}}</div>\n        <div><label>name: </label>{{hero.name}}</div>\n      </div>\n    </div>\n  </div>\n\n  "
+            template: "\n  <h1>{{title}}</h1>\n\n  <div class=\"row\">\n    <div class=\".col-xs-6 .col-offset-3\">\n      <div class=\"container\">\n        <form>\n          <p>Name:\n            <input (blur)=\"hero.name = $event.target.value\" type=\"text\"/>\n          </p>\n          <p>id:\n            <input (focus)=\"hero.id = $event.target.value\" type=\"text\"/>\n          </p>\n          <p>Numero:\n            <input [(ngModel)]=\"numero\" type=\"text\"/>\n          </p>\n        </form>\n        <!-- TODO: create array to modify with blur to show working vs non with ngModel-->\n        <h2>{{hero.name}} details!</h2>\n          <div><label>id: </label>{{hero.id}}</div>\n          <div><label>name: </label>{{hero.name}}</div>\n        <div><label>numero: </label>{{numero}}</div>\n      </div>\n    </div>\n  </div>\n\n  "
         }), 
         __metadata('design:paramtypes', [])
     ], AppComponent);

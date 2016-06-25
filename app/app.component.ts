@@ -15,10 +15,15 @@ import { Hero } from './hero';
           <p>id:
             <input (focus)="hero.id = $event.target.value" type="text"/>
           </p>
+          <p>Numero:
+            <input [(ngModel)]="numero" type="text"/>
+          </p>
         </form>
+        <!-- TODO: create array to modify with blur to show working vs non with ngModel-->
         <h2>{{hero.name}} details!</h2>
-        <div><label>id: </label>{{hero.id}}</div>
-        <div><label>name: </label>{{hero.name}}</div>
+          <div><label>id: </label>{{hero.id}}</div>
+          <div><label>name: </label>{{hero.name}}</div>
+        <div><label>numero: </label>{{numero}}</div>
       </div>
     </div>
   </div>
@@ -28,4 +33,5 @@ import { Hero } from './hero';
 export class AppComponent {
   title = "Blur of Heroes";
   hero = new Hero;
+  numero: number;
 }
